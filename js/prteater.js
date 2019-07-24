@@ -1,7 +1,7 @@
 (function ($) {
 
   "use strict";
-  
+
   $('.menu-glavni-meni-container a').on('click', function (e) {
     var linkHref = $(this).attr('href');
     var linkHrefSplit;
@@ -13,18 +13,20 @@
     linkHrefSplit = linkHref.split('/', 5);
     targetHref = '#' + linkHrefSplit[linkHrefSplit.length - 1];
 
-    if (!$(targetHref).length) {
+    if (targetHref.length < 0) {
       return;
     }
 
-    offset = $(targetHref).offset().top;
+    window.location.href = document.location.origin + '/' + targetHref;
 
-    $('html, body').animate({
-      scrollTop: offset - 90
-    }, {
-        duration: 500,
-        easing: 'linear'
-      });
+    // offset = $(targetHref).offset().top;
+
+    // $('html, body').animate({
+    //   scrollTop: offset - 90
+    // }, {
+    //     duration: 500,
+    //     easing: 'linear'
+    //   });
 
     $('.main-navigation').removeClass('toggled');
   });

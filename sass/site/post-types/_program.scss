@@ -1,7 +1,10 @@
 .part-of-program-vodje-projekta {
+  width: 100%;
+
   .entry-content {
     display: flex;
     flex-wrap: wrap;
+    background-color: $color-white;
 
     > div {
       padding-top: 0;
