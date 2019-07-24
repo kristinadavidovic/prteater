@@ -1,4 +1,15 @@
-$color__background-body: #fff;
+$color-primary: #c7b7a0;
+$color-secondary: #33533d;
+$color-dark: #333333;
+$color-white: #FFFFFF;
+$color-true-black: #000000;
+
+$color__section-separator: $color-secondary;
+$gray-light:                #cacaca;
+$gray-light-1:              #cccccc;
+$color-black: $color-true-black;
+
+$color__background-body: $color-white;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
 $color__background-button: #e6e6e6;

@@ -1,0 +1,40 @@
+.wpb_fp_grid {
+	position: relative;
+	text-align: center;
+}
+
+/* Common style */
+.wpb_fp_grid {
+	figure {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		text-align: center;
+		cursor: pointer;
+		margin: 0;
+		height: 100%;
+
+		img {
+			position: relative;
+			display: block;
+			/*min-height: 100%;*/
+			max-width: 100%;
+			opacity: 0.8;
+			margin: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 50em) {
+	.content {
+		padding: 0 10px;
+		text-align: center;
+	}
+
+	.wpb_fp_grid .figure {
+		display: inline-block;
+		float: none;
+		margin: 10px auto;
+		width: 100%;
+	}
+}

@@ -31,7 +31,7 @@ add_filter( 'body_class', 'prteater_body_classes' );
  */
 function prteater_pingback_header() {
 	if ( is_singular() && pings_open() ) {
-		printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
+		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 	}
 }
 add_action( 'wp_head', 'prteater_pingback_header' );

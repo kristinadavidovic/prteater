@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Nexa';
+    src: url('Nexa-Light.eot');
+    src: url('Nexa-Light.eot?#iefix') format('embedded-opentype'),
+        url('Nexa-Light.woff2') format('woff2'),
+        url('Nexa-Light.woff') format('woff'),
+        url('Nexa-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: url('Nexa-RegularItalic.eot');
+    src: url('Nexa-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('Nexa-RegularItalic.woff2') format('woff2'),
+        url('Nexa-RegularItalic.woff') format('woff'),
+        url('Nexa-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: url('Nexa-Regular.eot');
+    src: url('Nexa-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Nexa-Regular.woff2') format('woff2'),
+        url('Nexa-Regular.woff') format('woff'),
+        url('Nexa-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: url('NexaLight.eot');
+    src: url('NexaLight.eot?#iefix') format('embedded-opentype'),
+        url('NexaLight.woff2') format('woff2'),
+        url('NexaLight.woff') format('woff'),
+        url('NexaLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: url('Nexa-XBold.eot');
+    src: url('Nexa-XBold.eot?#iefix') format('embedded-opentype'),
+        url('Nexa-XBold.woff2') format('woff2'),
+        url('Nexa-XBold.woff') format('woff'),
+        url('Nexa-XBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+

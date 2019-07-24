@@ -1,0 +1,51 @@
+.part-of-program-vodje-projekta {
+  .entry-content {
+    display: flex;
+    flex-wrap: wrap;
+
+    > div {
+      padding-top: 0;
+      padding-bottom: 20px;
+
+      @include sm {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        padding: 0 20px;
+      }
+    }
+
+    .wpb_fp_quick_view_img {
+      flex: 0 0 45%;
+      max-width: 45%;
+
+      img {
+        max-height: 400px;
+        width: auto;
+      }
+    }
+    
+    .wpb_fp_quick_view_content {
+      flex: 0 0 55%;
+      max-width: 55%;
+      padding-bottom: 20px;
+
+      p {
+        font-size: 15px;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .post-thumbnail {
+    text-align: center;
+  }
+
+  .entry-title {
+    @include lineAfter($color-secondary, 10px 0 0 );
+  }
+
+  img {
+    margin: 0 auto;
+    display: block;
+  }
+}

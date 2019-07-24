@@ -1,0 +1,30 @@
+// Mixins for responsive design
+@mixin max($maxwidth) {
+  @media only screen and (max-width: $maxwidth) {
+    @content;
+  }
+}
+
+@mixin min($minwidth) {
+  @media only screen and (min-width: $minwidth) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media only screen and (max-width: #{$md-width}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media only screen and (max-width: #{$sm-width}) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media only screen and (max-width: #{$xs-width}) {
+    @content;
+  }
+}

@@ -1,3 +1,65 @@
+.button {
+	display: inline-block;
+	padding: 1.042em 1.667em;
+	border: 2px solid $color-primary;
+	font-family: $font__main;
+	font-weight: 500;
+	font-size: 0.75em;
+	text-align: center;
+	text-transform: uppercase;
+	color: $color-primary;
+	transition: all ease 0.3s;
+
+	&:focus,
+	&:hover {
+		background-color: $color-primary;
+    color: $color-dark;
+	}
+
+	&.button-prijava {
+		background-color: $color-secondary;
+		color: $color-white;
+		font-weight: bold;
+    font-size: 1.3rem;
+		overflow: hidden;
+		position: relative;
+		transition: all ease 0.5s;
+		z-index: 2;
+    border-color: $color-secondary;
+    padding: 20px 70px;
+		
+		&:focus,
+		&:hover {
+			background-color: transparent;
+			color: $color-dark;
+			
+			&::after {
+				height: 600%;
+    		background-color: var(--color-primary);
+			}
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 70%;
+			height: 0;
+			background-color: var(--color-secondary);
+			z-index: -1;
+			transform: translateY(-50%) translateX(-50%) rotate(90deg);
+			transition: all ease 0.5s;
+		}
+	}
+}
+
+.prijava-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 button,
 input[type="button"],
 input[type="reset"],

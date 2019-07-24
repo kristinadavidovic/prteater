@@ -1,0 +1,9 @@
+.type-post {
+  @extend %container;
+  @include fullWidthBackground($color-white);
+
+  .wp-video {
+    padding: 20px 0 50px;
+    margin: 0 auto;
+  }
+}

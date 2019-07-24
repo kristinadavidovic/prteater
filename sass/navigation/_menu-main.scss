@@ -1,0 +1,68 @@
+.menu-glavni-meni-container {
+  @include sm {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: $color-white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    padding: 0 30px;
+    border-top: 1px solid $gray-light-1;
+    @include transition($duration: 0.5s);
+  }
+
+  .menu {
+    li {
+      padding: 0 16px;
+      @include sm {
+        padding: 10px 0;
+        float: none;
+        width: 100%;
+        text-align: center;
+      }
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    a {
+      color: $color-secondary;
+      @include font-size(0.9375);
+      font-weight: 700;
+      text-transform: uppercase;
+
+      &:focus,
+      &:hover {
+        color: darken($color-secondary, 10%);
+      }
+    }
+  }
+
+  .toggled & {
+    @include sm {
+      max-height: 500px;
+      opacity: 1;
+      padding: 10px 30px;
+      visibility: visible;
+    }
+
+    .nav-menu {
+      li {
+        @include sm {
+          float: none;
+          width: 100%;
+          padding: 10px 16px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.site-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  min-height: 70px;
+  width: 100%;
+  overflow-y: auto;
+  z-index: 0;
+  background-color: $color-white;
+
+  .site-info {
+    padding: 10px 0;
+    width: 94%;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .site-footer-socials {
+    display: inline-flex;
+    margin-left: auto;
+    padding: 10px 0;
+
+    i {
+      position: relative;
+      font-size: 1.3rem;
+    }
+
+    a {
+      padding: 10px 20px;
+      margin: 0 3px;
+      display: inline-flex;
+      width: 20px;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        background-color: $color-secondary;
+        padding: 0 20px;
+        position: absolute;
+        top: 0;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        border-radius: 3px;
+        @include transition;
+      }
+
+      &:hover {
+        color: $color-white;
+
+        &::before {
+          bottom: 0;
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+}

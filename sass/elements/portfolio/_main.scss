@@ -1,0 +1,121 @@
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.clearfix:after,
+.clearfix:before {
+  display: table;
+  content: '';
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.wpb_fp_btn,
+.wpb_fp_btn:active,
+.wpb_fp_btn:focus,
+.wpb_fp_btn:hover,
+.wpb_portfolio_area a,
+.wpb_portfolio_area a:active,
+.wpb_portfolio_area a:focus,
+.wpb_portfolio_area a:hover {
+  text-decoration: none;
+  outline: 0;
+}
+
+#wpb-fp-sort-portfolio,
+.wpb-fp-filter li,
+.wpb_fp_btn {
+  -webkit-transition: 0.3s all ease-out;
+  -moz-transition: 0.3s all ease-out;
+  -o-transition: 0.3s all ease-out;
+  transition: 0.3s all ease-out;
+}
+
+.wpb_fp_btn {
+  padding: 10px 16px;
+  border-radius: 3px;
+  margin-top: 7px;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.wpb_fp_icons > a {
+  width: 42px;
+  display: inline-block;
+  height: 42px;
+  background: $color-white;
+  text-align: center;
+
+  > i {
+    display: block;
+    line-height: 42px;
+    font-size: 18px;
+    color: $color-white;
+  }
+}
+
+.mfp-wrap button {
+  &:active,
+  &:focus,
+  &:hover {
+    background: transparent;
+    box-shadow: none;
+  }
+}
+
+.white-popup {
+  position: relative;
+  background: $color-white;
+  padding: 0;
+  width: auto;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.wpb_fp_quick_view img {
+  max-width: 100%;
+}
+
+.wpb_fp_quick_view_content {
+  padding-top: 30px;
+  padding-right: 30px;
+
+  h2 {
+    font-size: 28px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+
+  p {
+    margin-bottom: 12px;
+    line-height: 18px;
+    font-size: 13px;
+  }
+}
+
+.wpb_fp_quick_view_content .wpb_fp_btn {
+  border: 1px solid;
+
+  &:hover {
+    background: transparent;
+  }
+}
+@media (min-width: 768px) {
+  .wpb_fp_quick_view_content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

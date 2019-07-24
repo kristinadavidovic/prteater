@@ -35,6 +35,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Clearings
 # Widgets
 # Content
+	## Post types
 	## Posts and pages
 	## Comments
 # Infinite scroll
@@ -44,6 +45,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
+@import "mixins/mixins-media-queries";
+@import "mixins/extendables";
 
 /*--------------------------------------------------------------
 # Normalize

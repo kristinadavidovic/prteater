@@ -1,5 +1,19 @@
-ul, ol {
-	margin: 0 0 1.5em 3em;
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		margin: 0;
+		padding: 0;
+
+		> ul,
+		> ol {
+			margin-bottom: 0;
+			margin-left: 1.5em;
+		}
+	}
 }
 
 ul {
@@ -7,13 +21,21 @@ ul {
 }
 
 ol {
-	list-style: decimal;
-}
+	counter-reset: lis 0;
 
-li > ul,
-li > ol {
-	margin-bottom: 0;
-	margin-left: 1.5em;
+	> li {
+		counter-increment: lis;
+		margin-bottom: 15px;
+
+		&::before {
+			content: counter(lis) ". ";
+			font-weight: bold;
+		}
+
+		p:first-of-type {
+			display: inline;
+		}
+	}
 }
 
 dt {
