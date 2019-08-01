@@ -271,7 +271,7 @@ function portfolio_vodje_shortcode_function($atts)
             $thumbnail_mata = get_post_meta($thumb, '_wp_attachment_image_alt', true);
             $wpb_fp_portfolio_ex_link = get_post_meta($post->ID, 'wpb_fp_portfolio_ex_link', true);
             $portfolio_title = get_the_title();
-            $portfolio_title = (strlen($portfolio_title) > 18) ? substr($portfolio_title, 0, 16) . '...' : $portfolio_title;
+            // $portfolio_title = (strlen($portfolio_title) > 18) ? substr($portfolio_title, 0, 16) . '...' : $portfolio_title;
             $post_link = get_the_permalink();
             $add_text = get_field('dodatni_tekst');
 

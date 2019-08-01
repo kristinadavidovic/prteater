@@ -72,9 +72,12 @@
 
     h2 {
       color: $color-white;
-      text-transform: uppercase;
-      letter-spacing: 0.10em;
       font-family: $font__special;
+      letter-spacing: 0.10em;
+      margin: 0 auto;
+      max-width: 90%;
+      text-transform: uppercase;
+      width: 100%;
       @include lineAfter($color-secondary, 10px 0 0);
 
       &::after {
