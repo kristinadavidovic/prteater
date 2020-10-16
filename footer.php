@@ -11,28 +11,25 @@
 
 ?>
 
-	</div><!-- #content -->
+    </div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
+    <footer id="colophon" class="site-footer">
+        <div class="site-info">
 
-			<div class="site-footer-socials">
-				<a href="https://www.facebook.com/prteater" target="_blank">
-					<i class="fab fa-facebook"></i>
-				</a>
-				<a href="https://www.instagram.com/pr_teater/" target="_blank">
-					<i class="fab fa-instagram"></i>
-				</a>
-				<a href="https://twitter.com/PRteater" target="_blank">
-					<i class="fab fa-twitter"></i>
-				</a>
-				<a href="https://www.linkedin.com/showcase/pr-teater/" target="_blank">
-					<i class="fab fa-linkedin-in"></i>
-				</a>
-			</div>
+            <div class="site-footer-socials">
+                <a href="https://www.facebook.com/prteater" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/pr_teater/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/PRteater" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
 
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+        </div><!-- .site-info -->
+    </footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer();?>
