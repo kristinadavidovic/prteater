@@ -1,4 +1,3 @@
-
 .slick-slider {
     position: relative;
     display: block;
@@ -51,7 +50,7 @@
 
 .slick-track:after,
 .slick-track:before {
-    content: "";
+    content: '';
     display: table;
 }
 
@@ -70,7 +69,7 @@
     display: none;
 }
 
-[dir=rtl] .slick-slide {
+[dir='rtl'] .slick-slide {
     float: right;
 }
 

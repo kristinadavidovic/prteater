@@ -1,86 +1,86 @@
 %container {
-  width: 100%;
-  max-width: $site__max-width;
-  margin: 0 auto;
-  position: relative;
-  padding: 0 10px;
+    width: 100%;
+    max-width: $site__max-width;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 10px;
 }
 
 %hiddenText {
-  font-size: 0;
-  color: transparent;
+    font-size: 0;
+    color: transparent;
 }
 
 %buttonDefault {
-  display: inline-block;
-  padding: 1.042em 1.667em;
-  border: 2px solid $color-primary;
-  font-family: $font__main;
-  font-weight: 500;
-  font-size: 0.75em;
-  text-align: center;
-  text-transform: uppercase;
-  color: $color-primary;
-  @include transition;
-
-  &:focus,
-  &:hover {
-    background-color: $color-primary;
-    color: $color-true-black;
-  }
-
-  &%buttonDark {
-    border-color: $color-secondary;
-    color: $color-true-black;
+    display: inline-block;
+    padding: 1.042em 1.667em;
+    border: 2px solid $color-primary;
+    font-family: $font__main;
+    font-weight: 500;
+    font-size: 0.75em;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-primary;
+    @include transition;
 
     &:focus,
     &:hover {
-      background-color: $color-secondary;
-      color: $color-true-black;
-    }
-  }
-
-  &%buttonAnimated {
-    position: relative;
-    overflow: hidden;
-    z-index: 2;
-    @include transition(all, ease, 0.5s);
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 70%;
-      height: 0;
-      background-color: $color-primary;
-      z-index: -1;
-      transform: translateY(-50%) translateX(-50%) rotate(90deg);
-      @include transition(all, ease, 0.5s);
+        background-color: $color-primary;
+        color: $color-true-black;
     }
 
-    &:focus,
-    &:hover {
-      background-color: transparent;
-      color: $color-white;
+    &%buttonDark {
+        border-color: $color-secondary;
+        color: $color-true-black;
 
-      &::after {
-        height: 600%;
-      }
-    }
-  }
-
-  &%buttonAnimatedDark {
-    border-color: $color-secondary;
-    color: $color-true-black;
-
-    &:focus,
-    &:hover {
-      color: $color-true-black;
+        &:focus,
+        &:hover {
+            background-color: $color-secondary;
+            color: $color-true-black;
+        }
     }
 
-    &::after {
-      background-color: $color-secondary;
+    &%buttonAnimated {
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+        @include transition(all, ease, 0.5s);
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 70%;
+            height: 0;
+            background-color: $color-primary;
+            z-index: -1;
+            transform: translateY(-50%) translateX(-50%) rotate(90deg);
+            @include transition(all, ease, 0.5s);
+        }
+
+        &:focus,
+        &:hover {
+            background-color: transparent;
+            color: $color-white;
+
+            &::after {
+                height: 600%;
+            }
+        }
     }
-  }
+
+    &%buttonAnimatedDark {
+        border-color: $color-secondary;
+        color: $color-true-black;
+
+        &:focus,
+        &:hover {
+            color: $color-true-black;
+        }
+
+        &::after {
+            background-color: $color-secondary;
+        }
+    }
 }

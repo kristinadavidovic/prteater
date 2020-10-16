@@ -1,49 +1,49 @@
 .type-page-sections {
-  flex: 0 0 100%;
-  max-width: 100%;
-  margin: 0;
-  background-attachment: fixed;
-  background-size: contain;
-  background-color: $color-white;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin: 0;
+    background-attachment: fixed;
+    background-size: contain;
+    background-color: $color-white;
 
-  header {
-    text-align: center;
-  }
-
-  .section-parallax {
-    @extend %container;
-    padding: 50px 10px 60px;
-    width: 92%;
-
-    @include sm {
-      width: 95%;
+    header {
+        text-align: center;
     }
 
-    @include xs {
-      width: 100%;
+    .section-parallax {
+        @extend %container;
+        padding: 50px 10px 60px;
+        width: 92%;
+
+        @include sm {
+            width: 95%;
+        }
+
+        @include xs {
+            width: 100%;
+        }
     }
-  }
 
-  /* Special styling for sections with featured image */
-  &.has-post-thumbnail {
-    padding: 0;
+    /* Special styling for sections with featured image */
+    &.has-post-thumbnail {
+        padding: 0;
 
-    img {
-      width: 100%;
+        img {
+            width: 100%;
+        }
     }
-  }
 
-  .entry-content-section {
-    padding: 20px 0;
-  }
+    .entry-content-section {
+        padding: 20px 0;
+    }
 }
 
 #podporniki {
-  .section-parallax {
-    max-width: 80%;
-  }
+    .section-parallax {
+        max-width: 80%;
+    }
 }
 
 .replacement-text {
-  text-align: center;
+    text-align: center;
 }

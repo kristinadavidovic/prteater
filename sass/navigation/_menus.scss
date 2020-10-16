@@ -1,170 +1,152 @@
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+    clear: both;
+    display: block;
+    float: left;
+    width: 100%;
 
-	&.toggled ul {
-		@include sm {
-			visibility: visible;
-		}
-	}
+    &.toggled ul {
+        @include sm {
+            visibility: visible;
+        }
+    }
 
-	ul {
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
 
-		@include sm {
-			visibility: hidden;
-		}
+        @include sm {
+            visibility: hidden;
+        }
 
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 100%;
-			left: -999em;
-			z-index: 99999;
+        ul {
+            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+            float: left;
+            position: absolute;
+            top: 100%;
+            left: -999em;
+            z-index: 99999;
 
-			ul {
-				left: -999em;
-				top: 0;
-			}
+            ul {
+                left: -999em;
+                top: 0;
+            }
 
-			li {
-				&.focus > ul,
-				&:hover > ul {
-					left: 100%;
-				}
-			}
+            li {
+                &.focus > ul,
+                &:hover > ul {
+                    left: 100%;
+                }
+            }
 
-			a {
-				width: 200px;
-			}
+            a {
+                width: 200px;
+            }
+        }
 
-			.focus > a,
-			:hover > a {}
+        li.focus > ul,
+        li:hover > ul {
+            left: auto;
+        }
+    }
 
-			a.focus,
-			a:hover {}
-		}
+    li {
+        float: left;
+        position: relative;
 
-		li.focus > ul,
-		li:hover > ul {
-			left: auto;
-		}
-	}
+        @include sm {
+            float: none;
+            padding: 10px 16px;
+        }
+    }
 
-	li {
-		float: left;
-		position: relative;
-
-		@include sm {
-			float: none;
-			padding: 10px 16px;
-		}
-
-		&.focus > a,
-		&:hover > a {}
-	}
-
-	a {
-		display: block;
-		text-decoration: none;
-	}
-
-	.current-menu-ancestor > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current_page_item > a {}
+    a {
+        display: block;
+        text-decoration: none;
+    }
 }
+
 /* Small menu. */
-.main-navigation.toggled ul,
 .menu-toggle {
-	// display: block;
-}
+    @include sm {
+        background-color: transparent;
+        border: 0;
+        width: 35px;
+        height: 35px;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        overflow: hidden;
 
-.menu-toggle {
-	@include sm {
-		background-color: transparent;
-		border: 0;
-		width: 35px;
-		height: 35px;
-		padding: 0;
-		margin: 0;
-		cursor: pointer;
-		overflow: hidden;
+        &:focus {
+            outline: none;
+        }
 
-		&:focus {
-			outline: none;
-		}
+        .toggled & {
+            span {
+                &:first-child {
+                    transform: rotate(45deg);
+                    top: 4px;
+                }
 
-		.toggled & {
-			span {
-				&:first-child {
-					transform: rotate(45deg);
-					top: 4px;
-				}
+                &:nth-child(2) {
+                    right: -400px;
+                }
 
-				&:nth-child(2) {
-					right: -400px;
-				}
+                &:last-child {
+                    transform: rotate(-45deg);
+                    top: 0;
+                }
+            }
+        }
+    }
 
-				&:last-child {
-					transform: rotate(-45deg);
-					top: 0;
-				}
-			}
-		}
-	}
+    span {
+        position: relative;
+        right: 0;
+        display: block;
+        height: 2px;
+        width: 30px;
+        border-radius: 5px;
+        background-color: $color-true-black;
+        margin: 0 auto;
+        @include transition($duration: 0.5s);
 
-	span {
-		position: relative;
-		right: 0;
-		display: block;
-		height: 2px;
-		width: 30px;
-		border-radius: 5px;
-		background-color: $color-true-black;
-		margin: 0 auto;
-		@include transition($duration: .5s);
+        &:first-child {
+            top: -5px;
+        }
 
-		&:first-child {
-			top: -5px;
-		}
-
-		&:last-child {
-			bottom: -5px;
-		}
-	}
+        &:last-child {
+            bottom: -5px;
+        }
+    }
 }
 @media screen and (min-width: $sm-width) {
-	.menu-toggle {
-		display: none;
-	}
+    .menu-toggle {
+        display: none;
+    }
 
-	.main-navigation ul {
-		display: block;
-	}
+    .main-navigation ul {
+        display: block;
+    }
 }
 
 .comment-navigation,
 .post-navigation,
 .posts-navigation {
-	.site-main & {
-		margin: 0 0 1.5em;
-		overflow: hidden;
-	}
+    .site-main & {
+        margin: 0 0 1.5em;
+        overflow: hidden;
+    }
 
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
+    .nav-previous {
+        float: left;
+        width: 50%;
+    }
 
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
-	}
+    .nav-next {
+        float: right;
+        text-align: right;
+        width: 50%;
+    }
 }

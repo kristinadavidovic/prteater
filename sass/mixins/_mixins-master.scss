@@ -1,108 +1,109 @@
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {
-	font-size: ($sizeValue * 16) * 1px;
-	font-size: $sizeValue * 1rem;
+    font-size: ($sizeValue * 16) * 1px;
+    font-size: $sizeValue * 1rem;
 }
 
 // Center block
 @mixin center-block {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 // Clearfix
 @mixin clearfix() {
-	content: "";
-	display: table;
-	table-layout: fixed;
+    content: '';
+    display: table;
+    table-layout: fixed;
 }
 
 // Clear after (not all clearfix need this also)
 @mixin clearfix-after() {
-	clear: both;
+    clear: both;
 }
 
 // Column width with margin
 @mixin column-width($numberColumns: 3) {
-	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+    width: map-get($columns, $numberColumns) -
+        (($columns__margin * ($numberColumns - 1)) / $numberColumns);
 }
 
 // Mixin for transitions
 @mixin transition($element: all, $effect: ease, $duration: 0.3s) {
-	transition: $element $effect $duration;
+    transition: $element $effect $duration;
 }
 
 // Mixin for lines after titles
 @mixin lineAfter($color, $margin) {
-  &::after {
-    content: "";
-    display: block;
-    width: 200px;
-    height: 4px;
-    margin: $margin;
-    background-color: $color-true-black;
-  }
+    &::after {
+        content: '';
+        display: block;
+        width: 200px;
+        height: 4px;
+        margin: $margin;
+        background-color: $color-true-black;
+    }
 }
 
 @mixin container {
-	width: 100%;
-	max-width: $site__max-width;
-	margin: 0 auto;
-	position: relative;
-	padding: 0 10px
+    width: 100%;
+    max-width: $site__max-width;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 10px;
 }
 
 // Mixin for background images
 @mixin backgroundImage($image: '', $size: '', $position: '', $repeat: '') {
-	@if ($image != '') {
-		background-image: url(../../images/#{$image});
-	}
-  @if ($size != '') {
-    background-size: $size;
-  }
-	@if ($position != '') {
-		background-position: $position;
-	}
-	@if ($repeat != '') {
-		background-repeat: $repeat;
-	}
+    @if ($image != '') {
+        background-image: url(../../images/#{$image});
+    }
+    @if ($size != '') {
+        background-size: $size;
+    }
+    @if ($position != '') {
+        background-position: $position;
+    }
+    @if ($repeat != '') {
+        background-repeat: $repeat;
+    }
 }
 
 // Mixin for full width background
 @mixin fullWidthBackground($color, $direction: both) {
-  position: relative;
-  background-color: $color;
+    position: relative;
+    background-color: $color;
 
-  @if ($direction == "left") or ($direction == "both") {
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 100%;
-      width: 9999px;
-      height: 100%;
-      background-color: $color;
+    @if ($direction == 'left') or ($direction == 'both') {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 100%;
+            width: 9999px;
+            height: 100%;
+            background-color: $color;
 
-      @include md {
-        width: 10px;
-      }
+            @include md {
+                width: 10px;
+            }
+        }
     }
-  }
 
-  @if ($direction == "right") or ($direction == "both") {
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 100%;
-      width: 9999px;
-      height: 100%;
-      background-color: $color;
+    @if ($direction == 'right') or ($direction == 'both') {
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 9999px;
+            height: 100%;
+            background-color: $color;
 
-      @include md {
-        width: 10px;
-      }
+            @include md {
+                width: 10px;
+            }
+        }
     }
-  }
 }

@@ -1,22 +1,4 @@
-// @import "../layout/content-sidebar";
-// @import "../layout/sidebar-content";
-
-/*--------------------------------------------------------------
-## Comments
---------------------------------------------------------------*/
-@import "post-types/post-types";
-
-/*--------------------------------------------------------------
-## Posts and pages
---------------------------------------------------------------*/
-@import "primary/posts-and-pages";
-
-/*--------------------------------------------------------------
-## Front page
---------------------------------------------------------------*/
-@import "primary/front-page";
-
-/*--------------------------------------------------------------
-## Comments
---------------------------------------------------------------*/
-@import "primary/comments";
+@import 'post-types/post-types';
+@import 'primary/posts-and-pages';
+@import 'primary/front-page';
+@import 'primary/comments';
